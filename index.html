@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .icon {
+        width: 80px;
+        height: 80px;
+        justify-content: center;
+      }
+
+      .speech {
+        justify-content: center;
+      }
+
+      .booty {
+        color: white;
+        font-family: futura;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+      }
+
+      @-webkit-keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @-moz-keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes Gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+    <title>TTS</title>
+  </head>
+
+  <body class="booty">
+    <div class="container text-center">
+      <img class="speech" src="https://i.imgur.com/qKLVxuz.png" alt="" />
+
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="booty">
+            <div class="form-group">
+              <textarea
+                name=""
+                id="text-input"
+                class="form-control form-control-lg"
+                placeholder="Type anything..."
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="pitch">Pitch</label>
+              <div id="pitch-value" class="badge badge-primary float-right">
+                1
+              </div>
+              <input
+                type="range"
+                id="pitch"
+                class="custom-range"
+                min="0.5"
+                max="2"
+                value="1"
+                step="0.1"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="rate">Rate</label>
+              <div id="rate-value" class="badge badge-primary float-right">
+                1
+              </div>
+              <input
+                type="range"
+                id="rate"
+                class="custom-range"
+                min="0.5"
+                max="2"
+                value="1"
+                step="0.1"
+              />
+            </div>
+            <div class="form-group">
+              <select
+                id="voice-select"
+                class="form-control form-control-lg"
+              ></select>
+            </div>
+            <button class="form-btn btn btn-light btn-lg btn-block">
+              Speak It
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
